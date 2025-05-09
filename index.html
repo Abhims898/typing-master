@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Typing Speed Test</h1>
-        <div>
-            <label for="timeLimit">Select Time Limit (in minutes):</label>
-            <select id="timeLimit">
-                <option value="1">1 minute</option>
-                <option value="2">2 minutes</option>
-                <option value="3">3 minutes</option>
-                <option value="5">5 minutes</option>
-                <option value="10">10 minutes</option>
-            </select>
-        </div>
-        <button id="startButton">Start Test</button>
-        <p id="quote">Click "Start Test" to begin.</p>
-        <textarea id="inputArea" placeholder="Start typing..." disabled></textarea>
-        <div id="result">
-            <p>Time: <span id="timer">0</span> seconds</p>
-            <p>Speed: <span id="speed">0</span> WPM (Words per minute)</p>
-        </div>
+  <div class="container">
+    <h1>Typing Speed Test</h1>
+
+    <label for="difficulty">Select Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <label for="timeLimit">Time Limit (minutes):</label>
+    <select id="timeLimit">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+
+    <button id="startButton">Start Test</button>
+
+    <div id="quoteContainer">
+      <p id="quote"></p>
     </div>
-    <script src="script.js"></script>
+
+    <textarea id="inputArea" placeholder="Start typing..." disabled></textarea>
+
+    <div id="result">
+      <p>Time: <span id="timer">0</span> s</p>
+      <p>Speed: <span id="speed">0</span> WPM</p>
+      <p>Accuracy: <span id="accuracy">100</span>%</p>
+    </div>
+
+    <div id="history">
+      <h3>Score History</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <button id="restartButton" style="display:none;">Restart Test</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
