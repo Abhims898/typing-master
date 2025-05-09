@@ -1,4 +1,5 @@
 ECF Activity-2 assigned by Vishu Sir.
+
 Typing Skill Checker:
 A simple web app to test and improve your typing speed and accuracy. Choose your difficulty, set a timer (up to 10 minutes), and type through changing sentences or paragraphs.
 
