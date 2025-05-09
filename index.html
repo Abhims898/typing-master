@@ -9,8 +9,19 @@
 <body>
     <div class="container">
         <h1>Typing Speed Test</h1>
-        <p id="quote">This is a sample typing test.</p>
-        <textarea id="inputArea" placeholder="Start typing..." autofocus></textarea>
+        <div>
+            <label for="timeLimit">Select Time Limit (in minutes):</label>
+            <select id="timeLimit">
+                <option value="1">1 minute</option>
+                <option value="2">2 minutes</option>
+                <option value="3">3 minutes</option>
+                <option value="5">5 minutes</option>
+                <option value="10">10 minutes</option>
+            </select>
+        </div>
+        <button id="startButton">Start Test</button>
+        <p id="quote">Click "Start Test" to begin.</p>
+        <textarea id="inputArea" placeholder="Start typing..." disabled></textarea>
         <div id="result">
             <p>Time: <span id="timer">0</span> seconds</p>
             <p>Speed: <span id="speed">0</span> WPM (Words per minute)</p>
